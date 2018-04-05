@@ -1,5 +1,6 @@
 from tkinter import *
 
+
 def plus():
     n1 = int(e1.get())
     n2 = int(e2.get())
@@ -33,17 +34,17 @@ def minimum():
     n12 = int(e12.get())
     n13 = int(e13.get())
     n14 = int(e14.get())
-    #minimum = min(n12, n13, n14)
     t1.config(text=str(min(n12, n13, n14)))
 
-def x2():
+def D():
     n15 = int(e15.get())
-    t1.config(text=str(pow(n15,2)))
+    a = int(ac.get())
+    c = int(cb.get())
+    t1.config(text=str(pow(n15,2)- 4*a*c))
 
 window = Tk()
 window.geometry('1080x720')
 window.title('Калькулятор by Vad1mka')
-
 
 
 t1 = Label(window, text='Здесь будет результат', fg='blue')
@@ -122,8 +123,16 @@ b6.pack(padx="14", pady="1")
 e15 = Entry(window, width = 24, bg='white', fg='black')
 e15.pack(padx="7", pady="1")
 
-b6 = Button(window, text='x^2 = ', command=x2)
-b6.config(width=20, height=2, bg='green', fg='blue')
-b6.pack(padx="14", pady="1")
+ac = Entry(window, width = 24, bg='white', fg='black')
+ac.pack(padx="7", pady="1")
+
+cb = Entry(window, width = 24, bg='white', fg='black')
+cb.pack(padx="7", pady="1")
+
+b7 = Button(window, text='D =  ', command=D)
+b7.config(width=20, height=2, bg='green', fg='blue')
+b7.pack(padx="14", pady="1")
 
 window.mainloop()
+
+#Create by Vad1mka
